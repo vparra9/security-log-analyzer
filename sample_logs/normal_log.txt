@@ -1,0 +1,5 @@
+INFO 2026-08-05 10:00:01 Application started
+INFO 2026-08-05 10:00:03 User logged in
+INFO 2026-08-05 10:01:15 File uploaded successfully
+WARNING 2026-08-05 10:02:41 Slow response detected
+INFO 2026-08-05 10:03:12 User logged out
