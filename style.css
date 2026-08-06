@@ -259,6 +259,14 @@ body{
     top: -5px;
 }
 
+.stat-content-4 h2{
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    color:rgba(64, 0, 128, 0.841);
+    font-size:30px;
+    margin-left: -10px;
+    position: relative;
+}
 .stat-content h4{
     font-family:Arial, Helvetica, sans-serif;
     font-size:13;
@@ -282,6 +290,15 @@ body{
     margin-left:-10px;
     white-space:nowrap;
 }
+
+.stat-content-4 h4{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13;
+    margin:3;
+    margin-left:-10px;
+    white-space:nowrap;
+}
+
 .stat-content p {
     font-family:Arial, Helvetica, sans-serif;
     font-size:11px;
@@ -297,6 +314,13 @@ body{
 }
 
 .stat-content-3 p{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+    margin-left:-10px;
+    color:gray;
+}
+
+.stat-content-4 p{
     font-family:Arial, Helvetica, sans-serif;
     font-size:11px;
     margin-left:-10px;
