@@ -1,0 +1,7 @@
+2026-08-06 11:22:01 INFO Inbound SSH connection request from malicious-ip 45.33.22.11
+2026-08-06 11:22:02 ERROR Failed password for invalid user admin from 45.33.22.11
+2026-08-06 11:22:04 ERROR Login failed for user root from 45.33.22.11
+2026-08-06 11:22:06 ERROR Authentication failure for user root from 45.33.22.11
+2026-08-06 11:22:08 ERROR Failed password for invalid user support from 45.33.22.11
+2026-08-06 11:22:10 CRITICAL Authentication failure for user admin from 45.33.22.11
+2026-08-06 11:23:45 INFO Accepted password for legitimate administrator dev_user
