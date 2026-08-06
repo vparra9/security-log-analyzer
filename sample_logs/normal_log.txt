@@ -1,5 +1,6 @@
-INFO 2026-08-05 10:00:01 Application started
-INFO 2026-08-05 10:00:03 User logged in
-INFO 2026-08-05 10:01:15 File uploaded successfully
-WARNING 2026-08-05 10:02:41 Slow response detected
-INFO 2026-08-05 10:03:12 User logged out
+2026-08-06 10:00:01 INFO Connection received from IP 192.168.1.50
+2026-08-06 10:00:05 INFO User alice successfully logged in from browser chrome
+2026-08-06 10:02:14 INFO Session opened for user alice on terminal T1
+2026-08-06 10:15:32 INFO Accepted password for user bob from IP 192.168.1.51
+2026-08-06 10:15:35 INFO Login successful for user bob
+2026-08-06 10:30:00 INFO Automated database health check status OK
