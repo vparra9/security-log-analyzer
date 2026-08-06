@@ -19,10 +19,10 @@
     <div class="grid-container">
         <div class="upload-file">
             <h3>1. Upload Log File</h3>
-            <p>Upload a .txt log file to analyze for suspcicious activity.</p>
+            <p>Upload a .log or .txt log file to analyze for suspcicious activity.</p>
 
             <label class="custom-file-upload">
-                <input type="file" id ="logInput" accept=".txt">
+                <input type="file" id ="logInput" accept=".log, .txt">
                     <p id="uploadText">Click to upload your file</p>
 
                 <!--upload an image for file icon-->
@@ -35,6 +35,10 @@
     
     <div class = "analyze-file">
         <h3>2. Analyze</h3>
+        <p>Click the button below to analyze the uploaded log file.</p>
+        <button id="analyzeBtn">
+            <span class="button-text">Analyze Log</span>
+        </button>
     </div>
     <div class = "grid-item">3</div> 
 
