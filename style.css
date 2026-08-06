@@ -18,8 +18,14 @@ body{
 /*Activate grid*/
 .grid-container{
     display:grid;
-    grid-template-columns:1fr;
-    grid-template-rows:100px 200px;
+    grid-template-columns:35% 1fr;
+    grid-template-areas:
+        "upload results"
+        "analyze results"
+        "supported results";
+    gap: 20px 40px;
+    align-items: start;
+    margin:18px;
 }
 
 /*********Upload Log File customization*********/
@@ -28,9 +34,12 @@ body{
 .upload-file {
     background-color:white;
     border-radius:6px;
-    width:30%;
-    height: 300%;
+    width:auto;
     margin-left:15px;
+    grid-column: 1;
+    grid-row: 1;
+    grid-area: upload;
+    padding:20px;
 }
 
 /*Customize header*/
@@ -92,9 +101,12 @@ body{
 .analyze-file {
     background-color:white;
     border-radius:6px;
-    width:30%;
-    height:300%;
-    margin-left:15px;   
+    width:auto;
+    margin-left:15px; 
+    grid-column:1;
+    grid-row:2; 
+    grid-area: analyze; 
+    padding:16px;
 }
 
 /*Customize header*/
@@ -146,8 +158,12 @@ body{
 .supported-format {
     background-color: white;
     border-radius: 6px;
-    width:30%;
+    width:auto;
     margin-left:15px;
+    grid-column:1;
+    grid-row:3;
+    grid-area: supported;
+    padding:16px;
 }
 /*Customize header*/
 .supported-format h3{
@@ -164,4 +180,11 @@ body{
     color:black;
     margin-left:15px;
 
+}
+
+/*******Customize "results"******/
+.results {
+    grid-column:2;
+    grid-row:1/4;
+    grid-area: results;
 }
