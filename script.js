@@ -19,6 +19,11 @@ const filePercent = document.getElementById("filePercent");
 
 const summaryText = document.getElementById("summaryText");
 
+const eventChartCanvas = document.getElementById('eventChart');
+
+// Allows to replace old chart with new chart when analyzing a second file instead of stacking another chart on top of it
+let eventChart;
+
 // Global container to hold the file so both functions have access
 let uploadedFile = null;
 /****Handles file that grabs log file *****/
@@ -70,8 +75,8 @@ analyzeButton.addEventListener('click', function() {
     fetch('https://miniature-umbrella-97q46qw79jpw39vgx-5000.app.github.dev/upload/', { 
         method: 'POST',
         body: formData
-    }
-)
+    })
+
     .then(response => {
         if (!response.ok) {
             throw new Error("Analysis request failed.");
@@ -123,10 +128,10 @@ analyzeButton.addEventListener('click', function() {
 
         else if (data.failed_logins === 0 && data.errors === 0) {
             summaryText.textContent = 
-                `The log contains ${totalEvents} detected events.` +
+                `The log contains ${totalEvents} detected events. ` +
                 `Normal activity was found, including ` +
                 `${data.successful_logins} successful logins and ` +
-                `${data.file_changes} file changes.` +
+                `${data.file_changes} file changes. ` +
                 `No suspicious activity was detected.`;
         }
 
@@ -138,7 +143,6 @@ analyzeButton.addEventListener('click', function() {
             `${data.successful_logins} successful logins, and ` +
             `${data.file_changes} file changes were detected.`;
         }
-    })
         
         // Update analysis status
         if (data.failed_logins > 0 || data.errors > 0) {
@@ -167,10 +171,43 @@ analyzeButton.addEventListener('click', function() {
 
             //Nothing meaningful detected
             analysisTitle.textContent = "System Healthy";
-            analysisMessage.textContent = "No suspicious activity was detected."
+            analysisMessage.textContent = "No suspicious activity was detected.";
             analysisStatus.style.backgroundColor = "#EAF9EE";
             analysisStatus.style.border = "1px solid #28a745";
         }
+
+        // Destroy previous chart if one exists
+        if (eventChart) {
+            eventChart.destroy();
+        }
+
+        // Create new chart
+        eventChart = new Chart(eventChartCanvas, {
+            type: "doughnut",
+
+            data: {
+                labels: [
+                    "Failed Logins",
+                    "Errors",
+                    "Successful Logins",
+                    "File Changes"
+                ],
+
+                datasets: [{
+                    data: [
+                        data.failed_logins,
+                        data.errors,
+                        data.successful_logins,
+                        data.file_changes
+                    ]
+                }]
+            },
+
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
     }) 
     .catch(error => {
         console.error("Connection failed:", error);
@@ -178,5 +215,5 @@ analyzeButton.addEventListener('click', function() {
     })
     .finally(() => {
         analyzeButton.disabled = false;
+    });
 });
-
