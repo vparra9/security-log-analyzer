@@ -2,6 +2,10 @@
 const logInput = document.getElementById('logInput');
 const uploadText = document.getElementById('uploadText');
 const analyzeButton = document.getElementById('analyzeBtn');
+const failedLoginCount = document.getElementById('failedLoginCount');
+const errorCount = document.getElementById('errorCount');
+const successfulLoginCount = document.getElementById('successfulLoginCount');
+const fileChangeCount = document.getElementById('fileChangeCount');
 
 // Global container to hold the file so both functions have access
 let uploadedFile = null;
@@ -21,6 +25,7 @@ logInput.addEventListener('change', function(){
         uploadText.innerText = "File is too large. Must be under 5 MB.";
         uploadText.style.color = "red";
         this.value = ""; //Resets input so file over 5 mb is removed
+        uploadedFile=null;
         return;
     }
 
@@ -53,23 +58,29 @@ analyzeButton.addEventListener('click', function() {
     fetch('https://miniature-umbrella-97q46qw79jpw39vgx-5000.app.github.dev/upload/', { 
         method: 'POST',
         body: formData
+    }
+)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Analysis request failed.");
+        }
+
+        return response.json()
     })
-    .then(response => response.json())
     .then(data => {
-        // Python's summary results will return
-        console.log("Analysis results from Python:", data);
+        console.log("Analysis results complete:", data);
 
-        // Displays newly calculated backend results
-        alert(`Analysis done for ${data.filename}
-                -Errors: ${data.errors}
-                -Failed Logins: ${data.failed_logins}
-                -Successful Logins: ${data.successful_logins}
-                -File Changes: ${data.file_changes}`);
-
-    })
+        failedLoginCount.textContent = data.failed_logins;
+        errorCount.textContent = data.errors;
+        successfulLoginCount.textContent = data.successful_logins;    
+        fileChangeCount.textContent = data.file_changes;
+    }) 
     .catch(error => {
         console.error("Connection failed:", error);
         alert("Cannot connect to Python. Is your server running?");
-    });
+    })
+    .finally(() => {
+        analyzeButton.disabled = false;
+    })
 });
 
