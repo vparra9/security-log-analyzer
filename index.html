@@ -100,6 +100,44 @@
                         <p id="analysisMessage">Upload a log file and click "Analyze Log" to generate insights and detect suspicious activity.</p>
                     </div>
                 </div>
+
+                <div class="analysis-details">
+                    <div class="event-breakdown">
+                        <h3>Event Breakdown</h3>
+
+                        <div class="chart-placeholder" id="eventChart">
+                            <p>Chart will appear here</p>
+                        </div>
+
+                        <div class="legend">
+                            <p><span class="dot failed-dot"></span>Failed Logins: <span id="failedPercent">0</span>%</p>
+                            <p><span class="dot error-dot"></span>Errors: <span id="errorPercent">0</span>%</p>
+                            <p><span class="dot success-dot"></span>Successful Logins: <span id="successPercent">0</span>%</p>
+                            <p><span class=""dot file-dot"></span>File Changes: <span id="filePercent">0</span>%</p>
+                        </div>
+                    </div>
+
+                    <div class="recent-events">
+                        <h3>Recent Events</h3>
+
+                        <div id="recentEventsList">
+                            <p>No events to display</p>
+                        </div>
+                    </div>
+                </div>         
+
+                <div class="summary-section">
+                    <div>
+                        <h3>Summary</h3>
+                        <p id="summaryText">
+                            No summary available.
+                        </p>
+
+                        <button id="downloadReportBtn">
+                            Download Report
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -12,6 +12,13 @@ const analysisTitle = document.getElementById('analysisTitle');
 const analysisMessage = document.getElementById('analysisMessage');
 const analysisStatus = document.getElementById("analysisStatus");
 
+const failedPercent = document.getElementById("failedPercent");
+const errorPercent = document.getElementById("errorPercent");
+const successPercent = document.getElementById("successPercent");
+const filePercent = document.getElementById("filePercent");
+
+const summaryText = document.getElementById("summaryText");
+
 // Global container to hold the file so both functions have access
 let uploadedFile = null;
 /****Handles file that grabs log file *****/
@@ -72,17 +79,69 @@ analyzeButton.addEventListener('click', function() {
 
         return response.json()
     })
+
     .then(data => {
         console.log("Analysis results complete:", data);
 
-        // Update dashboard cards
+        // Update stats cards
         failedLoginCount.textContent = data.failed_logins;
         errorCount.textContent = data.errors;
         successfulLoginCount.textContent = data.successful_logins;    
         fileChangeCount.textContent = data.file_changes;
 
+        //Calculate Total Events
+        const totalEvents = data.failed_logins + data.errors + data.successful_logins + data.file_changes;
+
+        //Calculate Percentages
+        if (totalEvents > 0) {
+            const failedPercentage = Math.round((data.failed_logins / totalEvents) * 100);
+
+            const errorPercentage = Math.round((data.errors / totalEvents) * 100);
+
+            const successPercentage = Math.round((data.successful_logins / totalEvents) * 100);
+
+            const filePercentage = Math.round((data.file_changes / totalEvents) * 100);
+
+            //Update percentage text
+            failedPercent.textContent = failedPercentage;
+            errorPercent.textContent = errorPercentage;
+            successPercent.textContent = successPercentage;
+            filePercent.textContent = filePercentage;
+
+        } else {
+            //If no events were found
+            failedPercent.textContent = 0;
+            errorPercent.textContent = 0;
+            successPercent.textContent = 0;
+            filePercent.textContent = 0;
+        }
+
+        //Update summary
+        if (totalEvents === 0) {
+            summaryText.textContent = "No recognized security activity was detected in this log file.";
+        }
+
+        else if (data.failed_logins === 0 && data.errors === 0) {
+            summaryText.textContent = 
+                `The log contains ${totalEvents} detected events.` +
+                `Normal activity was found, including ` +
+                `${data.successful_logins} successful logins and ` +
+                `${data.file_changes} file changes.` +
+                `No suspicious activity was detected.`;
+        }
+
+        else {
+            summaryText.textContent = 
+            `The log contains ${totalEvents} detected events. ` +
+            `${data.failed_logins} failed login attempts, ` +
+            `${data.errors} errors, ` +
+            `${data.successful_logins} successful logins, and ` +
+            `${data.file_changes} file changes were detected.`;
+        }
+    })
+        
         // Update analysis status
-        if (data.failed_lgins > 0 || data.errors > 0) {
+        if (data.failed_logins > 0 || data.errors > 0) {
 
             // Threats found
             analysisTitle.textContent = "Threats Detected";
@@ -93,7 +152,7 @@ analyzeButton.addEventListener('click', function() {
             analysisStatus.style.border = "1px solid orange";
         }
 
-        else if (data.successful_logins > 0 ||data.file_changes > 0) {
+        else if (data.successful_logins > 0 || data.file_changes > 0) {
 
             // Activity found, but nothing suspicious
             analysisTitle.textContent = "Analysis Complete";
@@ -119,6 +178,5 @@ analyzeButton.addEventListener('click', function() {
     })
     .finally(() => {
         analyzeButton.disabled = false;
-    })
 });
 

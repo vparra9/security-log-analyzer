@@ -1,59 +1,59 @@
-body{
-    background-color:rgba(211, 211, 211, 0.115);
+body {
+    background-color: rgba(211, 211, 211, 0.115);
 }
 
 /*Customize header*/
 .page-header {
-    background-color:rgb(3, 3, 86);
-    border-radius:4px;
+    background-color: rgb(3, 3, 86);
+    border-radius: 4px;
 }
 
 .page-header h1 {
-    margin-left:40px;
-    color:white;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    margin-left: 40px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:  20px;
 }
 
 /*Activate grid*/
-.grid-container{
-    display:grid;
-    grid-template-columns:35% 1fr;
+.grid-container {
+    display: grid;
+    grid-template-columns: 35% 1fr;
     grid-template-areas:
         "upload results"
         "analyze results"
         "supported results";
     gap: 20px 40px;
     align-items: start;
-    margin:18px;
+    margin: 18px;
 }
 
 /*********Upload Log File customization*********/
 
 /*Customize background*/
 .upload-file {
-    background-color:white;
-    border-radius:6px;
-    width:auto;
-    margin-left:15px;
+    background-color: white;
+    border-radius: 6px;
+    width: auto;
+    margin-left: 15px;
     grid-column: 1;
     grid-row: 1;
     grid-area: upload;
-    padding:20px;
+    padding: 20px;
 }
 
 /*Customize header*/
 .upload-file h3 {
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:15px;
-    margin-left:15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-left: 15px;
 }
 
 /*Customize paragraph*/
-.upload-file p{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:12px;
-    color:grey;
+.upload-file p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: grey;
     margin-left: 15px;
 }
 
@@ -61,66 +61,66 @@ body{
 
 /*Hide default browser button*/
 .custom-file-upload input[type="file"] {
-    display:none;
+    display: none;
 }
 
 /*Style label for custom button*/
 .custom-file-upload {
-    display:inline-block;
-    padding:10px 20px;
-    background-color:rgba(211, 211, 211, 0.32); 
-    border-radius:5px;
-    border-style:dashed;
-    border-color:rgba(128, 128, 128, 0.512);
-    cursor:pointer;
-    box-shadow:0 2px 5px rgba(0,0,0,0.2);
-    transition:background-color 0.2s ease;
-    margin-left:88px;
-    height:40%;
-    width:40%;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(211, 211, 211, 0.32); 
+    border-radius: 5px;
+    border-style: dashed;
+    border-color: rgba(128, 128, 128, 0.512);
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.2s ease;
+    margin-left: 88px;
+    height: 40%;
+    width: 40%;
 }
 
-.custom-file-upload p{
-    color:black;
-    font-family:Arial, sans-serif;
-    margin-right:15px;
+.custom-file-upload p {
+    color: black;
+    font-family :Arial, sans-serif;
+    margin-right :15px;
 }
 
 /* customize image icon*/
 
 .responsive-img {
-    width:30%;
-    object-fit:contain;
-    display:block;
-    margin-left:55px;
+    width: 30%;
+    object-fit: contain;
+    display: block;
+    margin-left: 55px;
 }
 
 /***********Customize Analyze File*************/
 
 /*Customize background*/
 .analyze-file {
-    background-color:white;
-    border-radius:6px;
-    width:auto;
-    margin-left:15px; 
-    grid-column:1;
-    grid-row:2; 
+    background-color: white;
+    border-radius: 6px;
+    width: auto;
+    margin-left: 15px; 
+    grid-column: 1;
+    grid-row: 2; 
     grid-area: analyze; 
-    padding:16px;
+    padding: 16px;
 }
 
 /*Customize header*/
 .analyze-file h3 {
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:15px;
-    margin-left:15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-left: 15px;
 }
 
 /*Customize paragraph*/
 .analyze-file p {
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:12px;
-    color:grey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: grey;
     margin-left: 15px;
 }
 
@@ -128,10 +128,10 @@ body{
 .analyze-file button {
     display: flex;
     justify-content: flex-start;
-    margin-left:90px;
-    background-color:rgba(211, 211, 211, 0.32);
-    border-color:rgba(211, 211, 211, 0.32);
-    border-radius:5px;
+    margin-left: 90px;
+    background-color: rgba(211, 211, 211, 0.32);
+    border-color: rgba(211, 211, 211, 0.32);
+    border-radius: 5px;
     height: 15%;
     width: 10%;
     padding: 5px 100px;
@@ -139,16 +139,16 @@ body{
 
 /*Customize text on button*/
 .analyze-file .button-text {
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:12px;
-    color:grey;
-    white-space:nowrap;
-    margin-left:-34px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: grey;
+    white-space: nowrap;
+    margin-left: -34px;
 }
 
 /*Customize hover effect*/
 .analyze-file button:hover {
-    background-color:rgba(180, 180, 180, 0.6);
+    background-color: rgba(180, 180, 180, 0.6);
     cursor: pointer;
 }
 
@@ -158,27 +158,27 @@ body{
 .supported-format {
     background-color: rgba(192, 243, 247, 0.178);
     border-radius: 6px;
-    width:auto;
-    margin-left:15px;
-    grid-column:1;
-    grid-row:3;
+    width: auto;
+    margin-left: 15px;
+    grid-column: 1;
+    grid-row: 3;
     grid-area: supported;
-    padding:16px;
+    padding: 16px;
 }
 /*Customize header*/
-.supported-format h3{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:13px;
-    color:blue;
-    margin-left:15px;
+.supported-format h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: blue;
+    margin-left: 15px;
 }
 
 /*Customize paragraph*/
-.supported-format p{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:10px;
-    color:black;
-    margin-left:15px;
+.supported-format p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: black;
+    margin-left: 15px;
 
 }
 
@@ -186,184 +186,276 @@ body{
 
 /*Customize background*/
 .results {
-    grid-column:2;
-    grid-row:1/4;
+    grid-column: 2;
+    grid-row: 1/4;
     grid-area: results;
     background-color: white;
     border-radius: 6px;
 }
 
 /*Customize header*/
-.results h3{
-    font-family:Arial, Helvetica, sans-serif;
+.results h3 {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     margin-left: 15px;
 }
 
 /*Customize paragraph*/
-.results p{
-    font-family:Arial, Helvetica, sans-serif;
-    color:rgb(3, 3, 86);
-    font-size:small;
+.results p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(3, 3, 86);
+    font-size: small;
     margin-left: 15px;
 }
 
 /******Customize stats Container******/
 
 /*Customize background*/
-.stats-container{
-    display:grid;
-    grid-template-columns:repeat(4, 1fr);
-    gap:10px;
-    margin-top:20px;
-    margin-left:15px;
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    margin-left: 15px;
 }
 
 /*Customize background*/
-.stat-card{
-    display:flex;
-    align-items:center;
+.stat-card {
+    display: flex;
+    align-items: center;
     width: auto;
-    justify-content:flex-start;
-    gap:12px;
-    background-color:white;
-    border:1px solid #dddddd;
-    border-radius:8px;
-    padding:16px;
-    box-shadow:0 2px 6px rgba(0,0,0,0.06);
+    justify-content: flex-start;
+    gap: 12px;
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
 }
 
-.stat-content h2{
-    font-family:Arial, Helvetica, sans-serif;
-    margin:0;
-    color:red;
-    font-size:30px;
+.stat-content h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: red;
+    font-size: 30px;
     margin-left: -10px;
 }
 
-.stat-content-2 h2{
-    font-family:Arial, Helvetica, sans-serif;
-    margin:0;
-    color:orange;
-    font-size:30px;
+.stat-content-2 h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: orange;
+    font-size: 30px;
     margin-left: -10px;
 }
 
-.stat-content-3 h2{
-    font-family:Arial, Helvetica, sans-serif;
-    margin:0;
-    color:green;
-    font-size:30px;
+.stat-content-3 h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: green;
+    font-size: 30px;
     margin-left: -10px;
     position: relative;
     top: -5px;
 }
 
-.stat-content-4 h2{
-    font-family:Arial, Helvetica, sans-serif;
-    margin:0;
-    color:rgba(64, 0, 128, 0.841);
-    font-size:30px;
+.stat-content-4 h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: rgba(64, 0, 128, 0.841);
+    font-size: 30px;
     margin-left: -10px;
     position: relative;
 }
-.stat-content h4{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:13;
-    margin:3;
-    margin-left:-10px;
-    white-space:nowrap;
+.stat-content h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13;
+    margin: 3;
+    margin-left: -10px;
+    white-space: nowrap;
 }
 
-.stat-content-2 h4{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:13;
-    margin:3;
-    margin-left:-10px;
-    white-space:nowrap;
+.stat-content-2 h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13;
+    margin: 3;
+    margin-left: -10px;
+    white-space: nowrap;
 }
 
-.stat-content-3 h4{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:13;
-    margin:3;
-    margin-left:-10px;
-    white-space:nowrap;
+.stat-content-3 h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13;
+    margin: 3;
+    margin-left: -10px;
+    white-space: nowrap;
 }
 
-.stat-content-4 h4{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:13;
-    margin:3;
-    margin-left:-10px;
-    white-space:nowrap;
+.stat-content-4 h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13;
+    margin: 3;
+    margin-left: -10px;
+    white-space: nowrap;
 }
 
 .stat-content p {
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:11px;
-    margin-left:-10px;
-    color:gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    margin-left: -10px;
+    color: gray;
 }
 
-.stat-content-2 p{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:11px;
-    margin-left:-10px;
-    color:gray;
+.stat-content-2 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    margin-left: -10px;
+    color: gray;
 }
 
-.stat-content-3 p{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:11px;
-    margin-left:-10px;
-    color:gray;
+.stat-content-3 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    margin-left: -10px;
+    color: gray;
 }
 
-.stat-content-4 p{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:11px;
-    margin-left:-10px;
-    color:gray;
+.stat-content-4 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    margin-left: -10px;
+    color: gray;
 }
 /*Customize stat icon*/
-.stat-icon{
-    width:50px;
-    margin-left:0;
-    margin-top:94px;
+.stat-icon {
+    width: 50px;
+    margin-left: 0;
+    margin-top: 94px;
 }
 
 /******Customize Analysis Status******/
 
 /*Customize background*/
-.analysis-status{
-    display:flex;
-    align-items:center;
-    grid-column:1/-1;
-    gap:15px;
-    background-color:rgba(192, 243, 247, 0.178);
-    border-radius:6px;
+.analysis-status {
+    display: flex;
+    align-items: center;
+    grid-column: 1/-1;
+    gap: 15px;
+    background-color: rgba(192, 243, 247, 0.178);
+    border-radius: 6px;
 }
 
-.status-text{
-    margin-top:10px;
+.status-text {
+    margin-top: 10px;
 }
-.status-text h4{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:15px;
-    color:black;
+.status-text h4 {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: black;
 }
 
-.status-text p{
-    margin-top:6px;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:13px;
+.status-text p {
+    margin-top: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
 }
 
 .analysis-status .stat-icon {
     width: 40px;
-    height:40px;
-    margin:0;
+    height: 40px;
+    margin: 0;
 
+}
+
+/******Analysis Details******/
+
+.analysis-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px 15px;
+}
+
+.event-breakdown, 
+.recent-events {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 18px;
+}
+
+.eventbreakdown h3,
+.recent-events h3,
+.summary-section h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-top: 0;
+}
+
+chart-placeholder {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.legend p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #555;
+}
+
+.dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+.failed-dot{
+    background-color: red;
+}
+
+.error-dot{
+    background-color: orange;
+}
+
+.success-dot{
+    background-color: green;
+}
+
+.file-dot{
+    background-color: purple;
+}
+
+.recent-events{
+    min-height: 260px;
+}
+
+.summary-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 18px;
+    margin: 20px 15px;
+}
+
+.summary-section p {
+    margin: 0;
+}
+
+.summary-section button{
+    padding: 10px 18px;
+    border: 1px solid #6c63ff;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
 }
