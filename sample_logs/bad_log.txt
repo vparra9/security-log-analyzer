@@ -1,6 +1,0 @@
-@@@ CORRUPTED FILE @@@
-ERROR: Missing header
-INVALID_RECORD
-????????
-<unexpected_token>
-NULL=NULL=NULL
