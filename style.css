@@ -406,9 +406,8 @@ body {
 
 .analysis-details {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 15px;
-    margin: 20px 15px;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    gap: 20px;
 }
 
 .event-breakdown, 
@@ -419,14 +418,32 @@ body {
     padding: 18px;
 }
 
+.summary-section {
+    border: 1px solid #dddddd;
+    background-color: white;
+    border-radius: 8px;
+    padding:18px;
+    padding-top: 25px;
+    position: relative;
+    left: 285px;
+    width: 145px;
+    height: 270px;
+    text-align: center;
+}
+
 .eventbreakdown h3,
-.recent-events h3,
-.summary-section h3 {
+.recent-events h3 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     margin-top: 0;
 }
 
+.summary-section h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-top: 0;
+    margin-left: -5px;
+}
 chart-placeholder {
     height: 180px;
     display: flex;
@@ -469,9 +486,12 @@ chart-placeholder {
 
 .recent-events{
     min-height: 260px;
+    position: relative;
+    left: 100px;
+    width: 210px;
+    height: 270px;
 }
-
-.summary-section {
+.section {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -492,6 +512,7 @@ chart-placeholder {
     border-radius: 6px;
     background-color: white;
     cursor: pointer;
+    margin-top: auto;
 }
 
 /******Edit chart******/
