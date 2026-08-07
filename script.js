@@ -2,10 +2,15 @@
 const logInput = document.getElementById('logInput');
 const uploadText = document.getElementById('uploadText');
 const analyzeButton = document.getElementById('analyzeBtn');
+
 const failedLoginCount = document.getElementById('failedLoginCount');
 const errorCount = document.getElementById('errorCount');
 const successfulLoginCount = document.getElementById('successfulLoginCount');
 const fileChangeCount = document.getElementById('fileChangeCount');
+
+const analysisTitle = document.getElementById('analysisTitle');
+const analysisMessage = document.getElementById('analysisMessage');
+const analysisStatus = document.getElementById("analysisStatus");
 
 // Global container to hold the file so both functions have access
 let uploadedFile = null;
@@ -70,10 +75,43 @@ analyzeButton.addEventListener('click', function() {
     .then(data => {
         console.log("Analysis results complete:", data);
 
+        // Update dashboard cards
         failedLoginCount.textContent = data.failed_logins;
         errorCount.textContent = data.errors;
         successfulLoginCount.textContent = data.successful_logins;    
         fileChangeCount.textContent = data.file_changes;
+
+        // Update analysis status
+        if (data.failed_lgins > 0 || data.errors > 0) {
+
+            // Threats found
+            analysisTitle.textContent = "Threats Detected";
+
+            analysisMessage.textContent = "Potential Security issues were found.";
+
+            analysisStatus.style.backgroundColor = "#FFF4E5";
+            analysisStatus.style.border = "1px solid orange";
+        }
+
+        else if (data.successful_logins > 0 ||data.file_changes > 0) {
+
+            // Activity found, but nothing suspicious
+            analysisTitle.textContent = "Analysis Complete";
+
+            analysisMessage.textContent = "Activity was detected, but no suspicious login attempts or system errors were found.";
+
+            analysisStatus.style.backgroundColor = "#EEF4FF";
+            analysisStatus.style.border = "1px solid #5B7CFA";
+        }
+
+        else {
+
+            //Nothing meaningful detected
+            analysisTitle.textContent = "System Healthy";
+            analysisMessage.textContent = "No suspicious activity was detected."
+            analysisStatus.style.backgroundColor = "#EAF9EE";
+            analysisStatus.style.border = "1px solid #28a745";
+        }
     }) 
     .catch(error => {
         console.error("Connection failed:", error);
