@@ -330,8 +330,40 @@ body{
 .stat-icon{
     width:50px;
     margin-left:0;
-    margin-top:-94px;
+    margin-top:94px;
 }
 
+/******Customize Analysis Status******/
 
+/*Customize background*/
+.analysis-status{
+    display:flex;
+    align-items:center;
+    grid-column:1/-1;
+    gap:15px;
+    background-color:rgba(192, 243, 247, 0.178);
+    border-radius:6px;
+}
 
+.status-text{
+    margin-top:10px;
+}
+.status-text h4{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:15px;
+    color:black;
+}
+
+.status-text p{
+    margin-top:6px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13px;
+}
+
+.analysis-status .stat-icon {
+    width: 40px;
+    height:40px;
+    margin:0;
+
+}
