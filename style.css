@@ -86,8 +86,10 @@ body {
 
 .custom-file-upload p {
     color: black;
-    font-family :Arial, sans-serif;
-    margin-right :15px;
+    font-family: Arial, sans-serif;
+    margin-right: 0;
+    margin-left: 0;
+    text-align: center;
 }
 
 /* customize image icon*/
@@ -96,7 +98,7 @@ body {
     width: 30%;
     object-fit: contain;
     display: block;
-    margin-left: 55px;
+    margin-left: 80px;
 }
 
 /***********Customize Analyze File*************/
@@ -111,8 +113,6 @@ body {
     grid-row: 2; 
     grid-area: analyze; 
     padding: 16px;
-    position: relative;
-    top: -90px;
 }
 
 /*Customize header*/
@@ -170,8 +170,6 @@ body {
     grid-row: 3;
     grid-area: supported;
     padding: 16px;
-    position: relative;
-    top:-180px;
 }
 /*Customize header*/
 .supported-format h3 {
@@ -351,9 +349,11 @@ body {
 }
 
 .warning-icon {
-    width: 80px;
+    width: 50px;
     height: 80px;
     margin-bottom: 10px;
+    object-fit: contain;
+    background-color:white;
 }
 
 .normal-icon {
@@ -407,9 +407,7 @@ body {
 
 .analysis-details {
     grid-column: 1/-1;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 12px;
+    display: block;
     margin-top: 8px;
 }
 
@@ -553,6 +551,7 @@ chart-placeholder {
     border-radius: 6px;
     padding: 20px;
     margin-top:20px;
+    width: 100%;
 }
 
 .event-content {

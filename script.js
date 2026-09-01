@@ -180,40 +180,6 @@ analyzeButton.addEventListener('click', function() {
         if (eventChart) {
             eventChart.destroy();
         }
-
-        // Create new chart
-        eventChart = new Chart(eventChartCanvas, {
-            type: "doughnut",
-
-            data: {
-                labels: [
-                    "Failed Logins",
-                    "Errors",
-                    "Successful Logins",
-                    "File Changes"
-                ],
-
-                datasets: [{
-                    data: [
-                        data.failed_logins,
-                        data.errors,
-                        data.successful_logins,
-                        data.file_changes
-                    ]
-                }]
-            },
-
-            options: {
-                responsive: true,
-                maintainAspectRatio: false
-            }
-        });
-    }) 
-    .catch(error => {
-        console.error("Connection failed:", error);
-        alert("Cannot connect to Python. Is your server running?");
-    })
-    .finally(() => {
-        analyzeButton.disabled = false;
     });
-});
+
+    });
