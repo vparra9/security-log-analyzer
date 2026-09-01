@@ -1,29 +1,18 @@
 # security-log-analyzer
 
-# Files:
-- index.html 
-  - the webpage
-  - contains: upload button, analyze button, results section, statistics card, recent events list
-- style.css
-  - controls: colors, cards, buttons, layout, animations
-- script.js
-  - Handles everything on the webpage
-  - Example: detect when user uploads a file, send the file to python, receive the results, display
-- app.py
-  - Receive the uploaded log file
-  - read every line
-  - count failed logins
-  - count successful logins
-  - detect suspicious activity
-  - return results to JavaScript
-- requirements.txt
-  - Lists Python packages needed
-- sample_logs/
-  - Store fake log files for testing
+A full-stack web application that allows users to upload `.log` or `.txt` files and analyze them for common security-related activity.
 
-# Version 1 Goals:
-  - Upload a .txt log file
-  - Analyze the file with Python
-  - Display: failed logins, successful logins, errors, file changes
-  - Show a warning if there are 3 or more failed logins in a row
-  - Show a list of recent events
+The Security Log Analyzer uses an HTML/CSS frontend, JavaScript for user interaction and communication with the backend, and a Python FastAPI backend to process uploaded log files. The backend searches the log for recognized security events and returns the results to the frontend as JSON. JavaScript then uses those results to dynamically update the analysis dashboard.
+
+The analyzer currently identifies:
+
+- Failed login attempts
+- Successful logins
+- System or application errors
+- File changes
+- Overall detected event activity
+
+The goal of this project was to build a practical cybersecurity application while gaining experience with frontend development, backend development, APIs, Python, JavaScript, file processing, and dynamic web interfaces.
+
+## Project Preview
+![alt text](image-1.png)
