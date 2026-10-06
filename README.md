@@ -1,3 +1,4 @@
+<img width="1785" height="740" alt="Screenshot 2026-10-06 at 1 58 34 AM" src="https://github.com/user-attachments/assets/96a67771-5a9d-48e6-9ece-ea7b08d911fa" />
 # security-log-analyzer
 
 A full-stack web application that allows users to upload `.log` or `.txt` files and analyze them for common security-related activity.
@@ -15,7 +16,10 @@ The analyzer currently identifies:
 The goal of this project was to build a practical cybersecurity application while gaining experience with frontend development, backend development, APIs, Python, JavaScript, file processing, and dynamic web interfaces.
 
 ## Project Preview
-![alt text](image-1.png)
+
+<img width="1390" height="750" alt="Screenshot 2026-10-06 at 1 59 54 AM" src="https://github.com/user-attachments/assets/b41fbe60-5b9b-460f-b533-8dfe497f533a" />
+
+
 The application provides a single dashboard where users can upload a log file, initiate analysis, and view the resulting security statistics.
 
 ## Features
