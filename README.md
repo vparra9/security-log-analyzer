@@ -1,4 +1,4 @@
-<img width="1785" height="740" alt="Screenshot 2026-10-06 at 1 58 34 AM" src="https://github.com/user-attachments/assets/96a67771-5a9d-48e6-9ece-ea7b08d911fa" />
+
 # security-log-analyzer
 
 A full-stack web application that allows users to upload `.log` or `.txt` files and analyze them for common security-related activity.
