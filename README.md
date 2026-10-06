@@ -227,7 +227,8 @@ The user can review:
 - Overall analysis status
 - Generated analysis summary
 
-<img width="1245" height="701" alt="image" src="https://github.com/user-attachments/assets/499b8280-c715-4f28-986c-4a235d545ef5" />
+<img width="1565" height="764" alt="Screenshot 2026-10-06 at 2 01 25 AM" src="https://github.com/user-attachments/assets/7c0a7451-c766-49d1-8de6-ded26dc73b40" />
+
 
 # Backend Log Analysis
 
