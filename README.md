@@ -91,7 +91,7 @@ The HTML interface includes:
 - Analysis status section
 - Event breakdown
 - Analysis summary
-- Download report button
+
 
 ### CSS3
 
